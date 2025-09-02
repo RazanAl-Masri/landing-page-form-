@@ -258,42 +258,59 @@
   }
 
   /* ===== Responsive ===== */
-  @media (max-width: 960px){
-    /* Remove desktop header offset (header not fixed on mobile) */
+@media (max-width: 960px){
     body{ padding-top:0 !important; }
 
     /* Header becomes non-sticky on mobile */
     header{ position:relative; height:auto; }
 
     /* Layout stacks */
-    .hero .container{grid-template-columns:1fr}
-    .row{grid-template-columns:1fr}
-    .cards{grid-template-columns:1fr}
-    .steps{grid-template-columns:1fr}
-    h2{font-size:36px}
-    .sticky-cta{display:flex}
+    .hero .container{grid-template-columns:1fr; gap:16px;}
+    .row{grid-template-columns:1fr;}
+    .cards{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
+    h2{font-size:36px;}
 
-    /* Header/button tweaks */
-    .nav{flex-wrap:nowrap;gap:12px}
+    /* Button tweaks */
     .nav .btn{
-      white-space:nowrap;
-      padding:10px 14px;
-      font-size:14px;
-      line-height:1.2;
+        white-space:nowrap;
+        padding:10px 14px;
+        font-size:14px;
     }
+
+    /* Video and Text Section - Mobile Friendly */
     #video-text-section .block {
-      flex-direction: column;
+        flex-direction: column;
     }
 
     #video-text-section .block.reverse {
-      flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
 
     #video-text-section .media iframe {
-      height: 250px;
-      width: 100%; /* Make video bigger on mobile */
+        height: 250px;
+        width: 100%; /* Make video bigger on mobile */
     }
-  }
+
+    /* Ensure sections like CTA, Process, and Cards are easy to read */
+    .cta, .process, .cards {
+        padding: 20px 16px;
+    }
+
+    .cta h3, .cta p {
+        font-size: 16px;
+    }
+
+    .cta .btn {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .trust .bar {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
   </style>
 </head>
 <body>
