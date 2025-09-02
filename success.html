@@ -31,12 +31,30 @@
     .btn:hover {
       background-color: #ff8a50;
     }
+    .video-container {
+      margin-bottom: 40px;
+    }
+    video {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
+  <div class="video-container">
+    <!-- Embed the video -->
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
   <h1>Congratulations! 🎉</h1>
   <p>We’ve received your application. Thank you for booking your 30-minute real estate strategy session.</p>
   <p>We’ll see you soon on Zoom! 😊</p>
+  <p>Click below to find available times for your session. <strong>Limited spots left!⏳</strong></p>
   <a href="https://calendly.com/timondro/30min" class="btn">View Your Booking</a>
 </body>
 </html>
